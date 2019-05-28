@@ -16,3 +16,20 @@ export const login = creds => dispatch => {
       })
       .catch();
   };
+
+export const ADD_PLANNER_START = "ADD_PLANNER_START";
+export const ADD_PLANNER_SUCCESS = "ADD_PLANNER_SUCCESS";
+export const ADD_PLANNER_FAIL = "ADD_PLANNER_FAIL";
+
+export const addNewPlanner = planner => dispatch => {
+    dispatch({ type: ADD_PLANNER_START})
+    return axios
+      .post(`${baseURL}`, planner)
+      .then(res => {
+        dispatch({ type: ADD_PLANNER_SUCCESS, payload: res.data})
+      })
+      .catch(err => {
+        console.log('Adding Wedding Planner failed: ', err.response)
+        dispatch({ type: ADD_PLANNER_FAIL, payload: err.response})
+      })
+  }
