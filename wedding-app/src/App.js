@@ -7,7 +7,7 @@ import PostForm from './components/PostForm'
 import RegistarForm from './components/RegistarForm';
 import HomePage from './components/HomePage';
 
-import './App.css';
+import './App.scss';
 
 function App() {
   return (
