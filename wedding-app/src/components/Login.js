@@ -2,8 +2,6 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { login } from './actions';
 
-import RegistarForm from './RegistarForm';
-
 class Login extends React.Component {
     state = {
         credentials: {

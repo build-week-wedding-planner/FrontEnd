@@ -17,8 +17,8 @@ class PostForm extends React.Component {
 
     handleChange = e => {
         this.setState({
-          credentials: {
-            ...this.state.credentials,
+          post: {
+            ...this.state.post,
             [e.target.name]: e.target.value
           }
         });
