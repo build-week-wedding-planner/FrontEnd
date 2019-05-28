@@ -7,6 +7,7 @@ import img from '../wedding.jpg'
 class PostForm extends React.Component {
     state = {
         post: {
+            id: '',
             img: <img src={img} alt='wedding reception table'/>,
             description: '',
             location: '',

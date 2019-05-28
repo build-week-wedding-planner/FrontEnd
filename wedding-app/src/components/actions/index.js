@@ -76,12 +76,12 @@ export const deletePost = id => dispatch => {
 
 export const EDIT_POST_START = 'EDIT_POST_START';
 export const EDIT_POST_SUCCESS = 'EDIT_POST_SUCCESS';
-export const EDIT_POST_FAILURE = 'EDIT_POST_FAILURE';
+export const EDIT_POST_FAIL = 'EDIT_POST_FAIL';
 
 export const editPost = post => dispatch => {
   dispatch({ type: EDIT_POST_START });
   return axios
-    .put(`${baseURL}/${id}`, post, {
+    .put(`${baseURL}/${post.id}`, post, {
       headers: { Authorization: localStorage.getItem('token') }
     })
     .then(res => {
@@ -89,6 +89,6 @@ export const editPost = post => dispatch => {
     })
     .catch(err => {
       console.log('Editing Wedding Post failed: ', err.response)
-      dispatch({ type: EDIT_POST_FAILURE, payload: err.response });
+      dispatch({ type: EDIT_POST_FAIL, payload: err.response });
     });
 };

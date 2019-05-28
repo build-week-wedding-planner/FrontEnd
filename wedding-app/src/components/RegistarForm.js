@@ -5,6 +5,7 @@ import { login } from './actions';
 class RegistarForm extends React.Component {
     state = {
         credentials: {
+            id: "",
             username: "",
             password: "",
             firstName: "",

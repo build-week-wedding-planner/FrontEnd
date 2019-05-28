@@ -11,7 +11,7 @@ import {
     DELETE_POST_FAIL,
     EDIT_POST_START,
     EDIT_POST_SUCCESS,
-    EDIT_POST_FAILURE
+    EDIT_POST_FAIL
  } from '../actions'
   
   const initialState = {
