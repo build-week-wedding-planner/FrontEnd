@@ -3,7 +3,15 @@ import {
     ADD_PLANNER_START,
     ADD_PLANNER_SUCCESS,
     ADD_PLANNER_FAIL,
-
+    ADD_POST_START,
+    ADD_POST_SUCCESS,
+    ADD_POST_FAIL,
+    DELETE_POST_START,
+    DELETE_POST_SUCCESS,
+    DELETE_POST_FAIL,
+    EDIT_POST_START,
+    EDIT_POST_SUCCESS,
+    EDIT_POST_FAILURE
  } from '../actions'
   
   const initialState = {
@@ -11,7 +19,10 @@ import {
     error: '',
     logginIn: false,
     addingNewPlanner: false,
-    plannersList: []
+    plannersList: [],
+    addingNewPost: false,
+    deletingPost: false,
+    editingPost: false,
     };
   
     const reducer = (state = initialState, action) => {
@@ -38,6 +49,60 @@ import {
                 return {
                     ...state,
                     addingNewPlanner: false,
+                    error: action.payload
+                }
+            case ADD_POST_START:
+                return {
+                    ...state,
+                    addingNewPost: true
+                }
+            case ADD_POST_SUCCESS:
+                return {
+                    ...state,
+                    addingNewPost: false,
+                    error: '',
+                    posts: action.payload
+                }
+            case ADD_POST_FAIL:
+                return {
+                    ...state,
+                    addingNewPost: false,
+                    error: action.payload
+                }
+            case DELETE_POST_START:
+                return {
+                    ...state,
+                    deletingPost: true
+                }
+            case DELETE_POST_SUCCESS:
+                return {
+                    ...state,
+                    deletingPost: false,
+                    error: '',
+                    posts: action.payload
+                }
+            case DELETE_POST_FAIL:
+                return {
+                    ...state,
+                    deletingPost: false,
+                    error: action.payload
+                }
+            case EDIT_POST_START:
+                return {
+                    ...state,
+                    editingPost: true
+                }
+            case EDIT_POST_SUCCESS:
+                return {
+                    ...state,
+                    editingPost: false,
+                    error: '',
+                    posts: action.payload
+                }
+            case EDIT_POST_FAIL:
+                return {
+                    ...state,
+                    editingPost: false,
                     error: action.payload
                 }
             default:
