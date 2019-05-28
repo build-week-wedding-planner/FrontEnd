@@ -2,6 +2,8 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { login } from './actions';
 
+import RegistarForm from './RegistarForm';
+
 class Login extends React.Component {
     state = {
         credentials: {
@@ -28,25 +30,30 @@ class Login extends React.Component {
 
     render() {
         return (
-          <div className="loginForm">
-            <form onSubmit={this.login}>
-                <input
-                    type="text"
-                    name="username"
-                    placeholder="Username"
-                    value={this.state.credentials.username}
-                    onChange={this.handleChange}
-                />
-                <input
-                    type="password"
-                    name="password"
-                    placeholder="Password"
-                    value={this.state.credentials.password}
-                    onChange={this.handleChange}
-                />
-                <button>Log in</button>
-            </form>
-          </div>
+            <div className="loginPage">
+                <nav>
+                 <a href="/RegistarForm">Registar</a>
+                </nav>
+                <div className="loginForm">
+                    <form onSubmit={this.login}>
+                        <input
+                            type="text"
+                            name="username"
+                            placeholder="Username"
+                            value={this.state.credentials.username}
+                            onChange={this.handleChange}
+                        />
+                        <input
+                            type="password"
+                            name="password"
+                            placeholder="Password"
+                            value={this.state.credentials.password}
+                            onChange={this.handleChange}
+                        />
+                        <button>Log in</button>
+                    </form>
+                </div>
+            </div>
         );
     }  
 }
