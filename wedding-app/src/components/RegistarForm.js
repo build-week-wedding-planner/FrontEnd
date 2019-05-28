@@ -7,7 +7,8 @@ class RegistarForm extends React.Component {
         credentials: {
             username: "",
             password: "",
-            name: "",
+            firstName: "",
+            lastName: "",
             location: "",
         }
     }
@@ -27,9 +28,16 @@ class RegistarForm extends React.Component {
                 <form>
                     <input
                         type="text"
-                        name="name"
-                        placeholder="Name"
-                        value={this.state.credentials.name}
+                        name="firstName"
+                        placeholder="First Name"
+                        value={this.state.credentials.firstName}
+                        onChange={this.handleChange}
+                    />
+                    <input
+                        type="text"
+                        name="lastName"
+                        placeholder="Last Name"
+                        value={this.state.credentials.lastName}
                         onChange={this.handleChange}
                     />
                     <input

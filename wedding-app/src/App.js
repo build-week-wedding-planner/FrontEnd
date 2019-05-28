@@ -4,6 +4,7 @@ import PrivateRoute from './components/PrivateRoute';
 
 import Login from './components/Login';
 import PostForm from './components/PostForm'
+import RegistarForm from './components/RegistarForm';
 
 import './App.css';
 
@@ -12,10 +13,12 @@ function App() {
     <Router>
     <div className="App">
       <nav>
-        <Link to="/login">Login</Link>
+        <NavLink to="/login">Login</NavLink>
+        <NavLink to="/registar-form">Registar</NavLink>
         <NavLink to="/protected">Create Post</NavLink>
       </nav>
       <Route path='/login' component={Login} />
+      <Route path='/registar-form' component={RegistarForm} />
       <PrivateRoute exact path='/protected' component={PostForm} />
     </div>
   </Router>
