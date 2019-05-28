@@ -1,6 +1,6 @@
 import { 
     LOGIN_START,
- } from './actions'
+ } from '../actions'
   
   const initialState = {
     posts: [],
@@ -8,7 +8,7 @@ import {
     logginIn: false
     };
   
-    export const reducer = (state = initialState, action) => {
+    const reducer = (state = initialState, action) => {
         switch (action.type){
             case LOGIN_START:
                 return {
@@ -16,7 +16,9 @@ import {
                     error: '',
                     logginIn: true
                 }
-          default:
-            return state;
+            default:
+                return state;
         }
   }
+
+  export default reducer
