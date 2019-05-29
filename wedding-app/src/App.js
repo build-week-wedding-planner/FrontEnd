@@ -7,6 +7,8 @@ import PostForm from './components/PostForm'
 import RegistarForm from './components/RegistarForm';
 import HomePage from './components/HomePage';
 
+import img from './WPP.png'
+
 import './App.scss';
 
 function App() {
@@ -14,7 +16,8 @@ function App() {
     <Router>
     <div className="App">
       <nav>
-      <NavLink to="/home">Home</NavLink>
+        <img src={img} alt='wedding planner portfolio logo' />
+        <NavLink to="/home">Home</NavLink>
         <NavLink to="/login">Login</NavLink>
         <NavLink to="/registar-form">Registar</NavLink>
         <NavLink to="/protected">Create Post</NavLink>
