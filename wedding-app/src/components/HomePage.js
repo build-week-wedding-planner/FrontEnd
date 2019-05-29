@@ -10,6 +10,7 @@ class HomePage extends React.Component {
         console.log(this.props);
         return (
             <div className="homePageDiv">
+                <h2>Welcome to Wedding Planner Portfolio!</h2>
                 {this.props.posts.map(post => {
                     return (
                         <div className="postCard" key={post.id}>

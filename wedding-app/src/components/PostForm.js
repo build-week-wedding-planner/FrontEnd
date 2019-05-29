@@ -52,13 +52,6 @@ class PostForm extends React.Component {
                         value={this.state.post.theme}
                         onChange={this.handleChange}
                     />
-                    <input
-                        type="text"
-                        name="username"
-                        placeholder="Username"
-                        value={this.state.post.username}
-                        onChange={this.handleChange}
-                    />
                     <textarea
                         type="text"
                         name="vendors"

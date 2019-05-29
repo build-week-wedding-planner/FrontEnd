@@ -11,6 +11,7 @@ class RegistarForm extends React.Component {
             firstName: "",
             lastName: "",
             location: "",
+            email: "",
         }
     }
 
@@ -28,7 +29,7 @@ class RegistarForm extends React.Component {
             <div className="registarForm">
                 <h2>Sign Up as a Wedding Planner!</h2>
                 <form>
-                    <input
+                    {/* <input
                         type="text"
                         name="firstName"
                         placeholder="First Name"
@@ -44,11 +45,18 @@ class RegistarForm extends React.Component {
                     />
                     <input
                         type="text"
+                        name="email"
+                        placeholder="Email"
+                        value={this.state.credentials.email}
+                        onChange={this.handleChange}
+                    />
+                    <input
+                        type="text"
                         name="location"
                         placeholder="Location"
                         value={this.state.credentials.location}
                         onChange={this.handleChange}
-                    />
+                    /> */}
                     <input
                         type="text"
                         name="username"
