@@ -1,17 +1,18 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { login } from './actions';
+import { addNewPost } from './actions';
 
 
 
 class PostForm extends React.Component {
     state = {
         post: {
-            id: '',
-            description: '',
-            location: '',
-            theme: '',
-            vendors: ''
+            eventname: "",
+            date: "",
+            description: "",
+            location: "",
+            theme: "",
+            vendors: ""
         }
     }
 
@@ -23,11 +24,42 @@ class PostForm extends React.Component {
           }
         });
       };
+    
+    addPost = e => {
+        e.preventDefault();
+        this.props.addNewPost(this.state.post).then(() => {
+          this.props.history.push('/');
+        });
+        this.setState({
+            post: {
+                eventName: "",
+                date: "",
+                description: "",
+                location: "",
+                theme: "",
+                vendors: ""
+            }
+        });
+    };
 
     render() {
         return (
             <div className="postForm">
-                <form>
+                <form onSubmit={this.addPost}>
+                <input
+                        type="text"
+                        name="eventName"
+                        placeholder="Name of the Wedding!"
+                        value={this.state.post.eventName}
+                        onChange={this.handleChange}
+                    />
+                    <input
+                        type="text"
+                        name="date"
+                        placeholder="Date of the Wedding!"
+                        value={this.state.post.date}
+                        onChange={this.handleChange}
+                    />
                     <textarea
                         type="text"
                         name="description"
@@ -66,4 +98,4 @@ class PostForm extends React.Component {
     }  
 }
 
-export default connect(null, { login })(PostForm)
+export default connect(null, { addNewPost })(PostForm)

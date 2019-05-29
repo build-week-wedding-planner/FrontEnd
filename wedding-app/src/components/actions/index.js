@@ -43,7 +43,7 @@ export const ADD_POST_FAIL = "ADD_POST_FAIL";
 export const addNewPost = post => dispatch => {
     dispatch({ type: ADD_POST_START})
     return axios
-      .post(`${baseURL}`, post, {
+      .post(`${baseURL}/addevents`, post, {
         headers: { Authorization: localStorage.getItem('token') }
       })
       .then(res => {
