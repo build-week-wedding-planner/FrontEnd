@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 
+import img from '../wedding.jpg'
 
 class HomePage extends React.Component {
    
@@ -17,7 +18,7 @@ class HomePage extends React.Component {
                             <i
                                 class="fas fa-times"
                             />
-                            <img src={post.img} alt={post.location} />
+                            <img src={img} alt='wedding reception table'/>
                             <p>{post.description}</p>
                             <p>{post.location}</p>
                             <p>{post.theme}</p>

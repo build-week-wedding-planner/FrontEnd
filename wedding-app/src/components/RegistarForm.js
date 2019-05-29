@@ -1,17 +1,17 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { login } from './actions';
+import { addNewPlanner } from './actions';
 
 class RegistarForm extends React.Component {
     state = {
         credentials: {
-            id: "",
+            // id: "",
             username: "",
             password: "",
-            firstName: "",
-            lastName: "",
-            location: "",
-            email: "",
+            // firstName: "",
+            // lastName: "",
+            // location: "",
+            // email: "",
         }
     }
 
@@ -24,11 +24,24 @@ class RegistarForm extends React.Component {
         });
       };
 
+    addPlanner = e => {
+        e.preventDefault();
+        this.props.addNewPlanner(this.state.credentials).then(() => {
+          this.props.history.push('/protected');
+        });
+        this.setState({
+          credentials: {
+            username: "",
+            password: "", 
+          }
+        });
+    };
+
     render() {
         return (
             <div className="registarForm">
                 <h2>Sign Up as a Wedding Planner!</h2>
-                <form>
+                <form onSubmit={this.addPlanner}>
                     {/* <input
                         type="text"
                         name="firstName"
@@ -79,4 +92,4 @@ class RegistarForm extends React.Component {
     }  
 }
 
-export default connect(null, { login })(RegistarForm)
+export default connect(null, { addNewPlanner })(RegistarForm)
