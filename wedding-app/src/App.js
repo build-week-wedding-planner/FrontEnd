@@ -17,13 +17,13 @@ function App() {
     <div className="App">
       <nav>
         <img src={img} alt='wedding planner portfolio logo' />
-        <NavLink to="/home">Home</NavLink>
+        <NavLink to="/">Home</NavLink>
         <NavLink to="/login">Login</NavLink>
         <NavLink to="/registar-form">Registar</NavLink>
         <NavLink to="/protected">Create Post</NavLink>
       </nav>
+      <Route exact path='/' component={HomePage} />
       <Route path='/login' component={Login} />
-      <Route path='/home' component={HomePage} />
       <Route path='/registar-form' component={RegistarForm} />
       <PrivateRoute exact path='/protected' component={PostForm} />
     </div>
