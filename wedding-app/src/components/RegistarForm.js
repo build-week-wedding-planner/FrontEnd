@@ -26,6 +26,7 @@ class RegistarForm extends React.Component {
     render() {
         return (
             <div className="registarForm">
+                <h2>Sign Up as a Wedding Planner!</h2>
                 <form>
                     <input
                         type="text"
