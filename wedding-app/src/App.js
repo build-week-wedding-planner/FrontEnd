@@ -12,16 +12,28 @@ import img from './WPP.png'
 import './App.scss';
 
 function App() {
+  const logout = () => {
+    localStorage.removeItem('token');
+    localStorage.removeItem("authorization");
+    window.location.reload();
+  };
   return (
     <Router>
     <div className="App">
-      <nav>
-        <img src={img} alt='wedding planner portfolio logo' />
-        <NavLink to="/">Home</NavLink>
-        <NavLink to="/login">Login</NavLink>
-        <NavLink to="/registar-form">Registar</NavLink>
-        <NavLink to="/protected">Create Post</NavLink>
-      </nav>
+        {localStorage.getItem('token') ? (
+          <nav>
+            <img src={img} alt='wedding planner portfolio logo' />
+            <NavLink to="/">Home</NavLink>
+            <NavLink to="/protected">Create Post</NavLink>
+            <a onClick={() => logout()} href="#" className="activeNavButton">Logout</a>
+          </nav>
+        ) : (
+          <nav>
+            <img src={img} alt='wedding planner portfolio logo' />
+            <NavLink to="/login">Login</NavLink>
+            <NavLink to="/registar-form">Registar</NavLink>
+          </nav>
+        )}
       <Route exact path='/' component={HomePage} />
       <Route path='/login' component={Login} />
       <Route path='/registar-form' component={RegistarForm} />

@@ -24,7 +24,7 @@ class RegistarForm extends React.Component {
         });
       };
 
-      addPlanner = e => {
+    addPlanner = e => {
         e.preventDefault();
         this.props.addNewPlanner(this.state.credentials).then(() => {
           this.props.history.push('/protected');
@@ -35,7 +35,7 @@ class RegistarForm extends React.Component {
             password: "", 
           }
         });
-      };
+    };
 
     render() {
         return (
