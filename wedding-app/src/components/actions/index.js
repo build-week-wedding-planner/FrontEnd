@@ -2,7 +2,7 @@ import axios from 'axios';
 
 export const LOGIN_START = "LOGIN_START";
 
-const baseURL = "http://localhost:5000/api";
+const baseURL = "https://weddingplannah.herokuapp.com";
 
 export const login = creds => dispatch => {
     dispatch({
@@ -24,7 +24,7 @@ export const ADD_PLANNER_FAIL = "ADD_PLANNER_FAIL";
 export const addNewPlanner = planner => dispatch => {
     dispatch({ type: ADD_PLANNER_START})
     return axios
-      .post(`${baseURL}`, planner, {
+      .post(`${baseURL}/register`, planner, {
         headers: { Authorization: localStorage.getItem('token') }
       })
       .then(res => {
