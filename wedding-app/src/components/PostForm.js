@@ -2,13 +2,12 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { login } from './actions';
 
-import img from '../wedding.jpg'
+
 
 class PostForm extends React.Component {
     state = {
         post: {
             id: '',
-            img: <img src={img} alt='wedding reception table'/>,
             description: '',
             location: '',
             theme: '',
@@ -29,7 +28,6 @@ class PostForm extends React.Component {
         return (
             <div className="postForm">
                 <form>
-                    <img src={img} alt='wedding reception table'/>
                     <textarea
                         type="text"
                         name="description"
