@@ -17,6 +17,25 @@ export const login = creds => dispatch => {
       .catch();
   };
 
+export const FETCH_POST_START = 'FETCH_POST_START';
+export const FETCH_POST_SUCCESS = 'FETCH_POST_SUCCESS';
+export const FETCH_POST_FAIL = 'FETCH_POST_FAIL';
+
+export const getPost = () => dispatch => {
+    dispatch({ type: FETCH_POST_START });
+    axios
+      .get(`${baseURL}/events`, {
+        headers: { Authorization: localStorage.getItem('token') }
+      })
+      .then(res => {
+        dispatch({ type: FETCH_POST_SUCCESS, payload: res.data });
+      })
+      .catch(err => {
+        console.log('Getting Wedding Posts Failed: ', err.response);
+        dispatch({ type: FETCH_POST_FAIL, payload: err.response });
+      });
+};
+
 export const ADD_PLANNER_START = "ADD_PLANNER_START";
 export const ADD_PLANNER_SUCCESS = "ADD_PLANNER_SUCCESS";
 export const ADD_PLANNER_FAIL = "ADD_PLANNER_FAIL";
@@ -43,9 +62,11 @@ export const ADD_POST_FAIL = "ADD_POST_FAIL";
 export const addNewPost = post => dispatch => {
     dispatch({ type: ADD_POST_START})
     return axios
-      .post(`${baseURL}`, post, {
-        headers: { Authorization: localStorage.getItem('token') }
-      })
+      .post(`${baseURL}/addevent`, post, 
+      // {
+      //   // headers: { Authorization: localStorage.getItem('token') }
+      // }
+      )
       .then(res => {
         dispatch({ type: ADD_POST_SUCCESS, payload: res.data})
       })

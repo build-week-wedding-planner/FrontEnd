@@ -14,7 +14,7 @@ import './App.scss';
 function App() {
   const logout = () => {
     localStorage.removeItem('token');
-    localStorage.removeItem("authorization");
+    localStorage.removeItem("Authorization");
     window.location.reload();
   };
   return (
