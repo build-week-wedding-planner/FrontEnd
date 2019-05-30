@@ -21,9 +21,11 @@ class HomePage extends React.Component {
                 {this.props.posts.map(post => {
                     return (
                         <div className="postCard" key={post.id}>
+                            <h4>{localStorage.getItem('user')}</h4>
                             <i
                                 className="fas fa-times"
                             />
+                            <i className="fas fa-pen"></i>
                             <img src={img} alt='wedding reception table'/>
                             <p>{post.description}</p>
                             <p>{post.location}</p>
