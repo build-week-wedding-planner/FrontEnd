@@ -62,9 +62,11 @@ export const ADD_POST_FAIL = "ADD_POST_FAIL";
 export const addNewPost = post => dispatch => {
     dispatch({ type: ADD_POST_START})
     return axios
-      .post(`${baseURL}/addevent`, post, {
-        headers: { Authorization: localStorage.getItem('token') }
-      })
+      .post(`${baseURL}/addevent`, post, 
+      // {
+      //   // headers: { Authorization: localStorage.getItem('token') }
+      // }
+      )
       .then(res => {
         dispatch({ type: ADD_POST_SUCCESS, payload: res.data})
       })

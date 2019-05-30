@@ -27,6 +27,7 @@ import {
     addingNewPost: false,
     deletingPost: false,
     editingPost: false,
+    post: '',
     };
   
     const reducer = (state = initialState, action) => {
@@ -83,7 +84,7 @@ import {
                     ...state,
                     addingNewPost: false,
                     error: '',
-                    posts: action.payload
+                    post: action.payload
                 }
             case ADD_POST_FAIL:
                 return {

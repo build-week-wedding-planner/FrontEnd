@@ -30,6 +30,7 @@ class PostForm extends React.Component {
         this.props.addNewPost(this.state.post).then(() => {
           this.props.history.push('/');
         });
+        console.log(this.state.post)
         this.setState({
             post: {
                 "eventname": "",
@@ -48,9 +49,9 @@ class PostForm extends React.Component {
                 <form onSubmit={this.addPost}>
                 <input
                         type="text"
-                        name="eventName"
+                        name="eventname"
                         placeholder="Name of the Wedding!"
-                        value={this.state.post.eventName}
+                        value={this.state.post.eventname}
                         onChange={this.handleChange}
                     />
                     <input

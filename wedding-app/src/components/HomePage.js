@@ -14,7 +14,7 @@ class HomePage extends React.Component {
    
 
     render() {
-        console.log(this.props);
+        console.log(this.props.posts);
         return (
             <div className="homePageDiv">
                 <h2>Welcome to Wedding Planner Portfolio!</h2>
