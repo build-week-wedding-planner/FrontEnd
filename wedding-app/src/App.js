@@ -31,7 +31,7 @@ function App() {
           <nav>
             <img src={img} alt='wedding planner portfolio logo' />
             <NavLink to="/login">Login</NavLink>
-            <NavLink to="/registar-form">Registar</NavLink>
+            <NavLink to="/registar-form">Registar as a Wedding Planner</NavLink>
           </nav>
         )}
       <Route exact path='/' component={HomePage} />

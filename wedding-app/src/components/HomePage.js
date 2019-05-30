@@ -27,7 +27,6 @@ class HomePage extends React.Component {
                                     className="fas fa-times"
                                 />
                             </div>
-                            <h3>{localStorage.getItem('user')}</h3>
                             <img src={img} alt='wedding reception table'/>
                             <div className='belowPicture'>
                                 <h4>{post.eventname}</h4>
