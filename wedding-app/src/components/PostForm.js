@@ -7,12 +7,12 @@ import { addNewPost } from './actions';
 class PostForm extends React.Component {
     state = {
         post: {
-            eventname: "",
-            date: "",
-            description: "",
-            location: "",
-            theme: "",
-            vendors: ""
+            "eventname": "",
+            "date": "",
+            "description": "",
+            "location": "",
+            "theme": "",
+            "vendors": ""
         }
     }
 
@@ -32,12 +32,12 @@ class PostForm extends React.Component {
         });
         this.setState({
             post: {
-                eventName: "",
-                date: "",
-                description: "",
-                location: "",
-                theme: "",
-                vendors: ""
+                "eventname": "",
+                "date": "",
+                "description": "",
+                "location": "",
+                "theme": "",
+                "vendors": ""
             }
         });
     };

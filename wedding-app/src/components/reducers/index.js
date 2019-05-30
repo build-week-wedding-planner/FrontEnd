@@ -1,5 +1,8 @@
 import { 
     LOGIN_START,
+    FETCH_POST_START,
+    FETCH_POST_SUCCESS,
+    FETCH_POST_FAIL,
     ADD_PLANNER_START,
     ADD_PLANNER_SUCCESS,
     ADD_PLANNER_FAIL,
@@ -18,6 +21,7 @@ import {
     posts: [],
     error: '',
     logginIn: false,
+    fetchingPost: false,
     addingNewPlanner: false,
     plannersList: [],
     addingNewPost: false,
@@ -32,6 +36,24 @@ import {
                     ...state,
                     error: '',
                     logginIn: true
+                }
+            case FETCH_POST_START:
+                return {
+                    ...state,
+                    fetchingPost: true
+                }
+            case FETCH_POST_SUCCESS:
+                return {
+                    ...state,
+                    error: '',
+                    fetchingPost: false,
+                    posts: action.payload
+                }
+            case FETCH_POST_FAIL:
+                return {
+                    ...state,
+                    fetchingPost: false,
+                    error: action.payload
                 }
             case ADD_PLANNER_START:
                 return {

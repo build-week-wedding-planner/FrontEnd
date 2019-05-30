@@ -2,9 +2,15 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 
+import { getPost } from './actions';
+
 import img from '../wedding.jpg'
 
 class HomePage extends React.Component {
+
+    componentDidMount() {
+        this.props.getPost()
+    }
    
 
     render() {
@@ -16,7 +22,7 @@ class HomePage extends React.Component {
                     return (
                         <div className="postCard" key={post.id}>
                             <i
-                                class="fas fa-times"
+                                className="fas fa-times"
                             />
                             <img src={img} alt='wedding reception table'/>
                             <p>{post.description}</p>
@@ -35,4 +41,4 @@ const mapStateToProps = state => ({
     posts: state.posts
   });
 
-  export default withRouter(connect(mapStateToProps, {})(HomePage))
+  export default withRouter(connect(mapStateToProps, { getPost })(HomePage))
