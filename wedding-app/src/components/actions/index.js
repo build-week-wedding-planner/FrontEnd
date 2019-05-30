@@ -82,8 +82,8 @@ export const DELETE_POST_FAIL = 'DELETE_POST_FAIL';
 
 export const deletePost = id => dispatch => {
   dispatch({ type: DELETE_POST_START })
-  axios 
-    .delete(`${baseURL}/${id}`, {
+   return axios 
+    .delete(`${baseURL}/deleteevent/${id}`, {
       headers: { Authorization: localStorage.getItem('token') }
     })
     .then(res => {

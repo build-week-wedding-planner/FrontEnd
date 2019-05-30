@@ -102,7 +102,7 @@ import {
                     ...state,
                     deletingPost: false,
                     error: '',
-                    posts: action.payload
+                    post: action.payload
                 }
             case DELETE_POST_FAIL:
                 return {
