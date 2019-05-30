@@ -21,16 +21,22 @@ class HomePage extends React.Component {
                 {this.props.posts.map(post => {
                     return (
                         <div className="postCard" key={post.id}>
-                            <h4>{localStorage.getItem('user')}</h4>
-                            <i
-                                className="fas fa-times"
-                            />
-                            <i className="fas fa-pen"></i>
+                            <div className='icons'>
+                                <i className="fas fa-pen"></i>
+                                <i
+                                    className="fas fa-times"
+                                />
+                            </div>
+                            <h3>{localStorage.getItem('user')}</h3>
                             <img src={img} alt='wedding reception table'/>
-                            <p>{post.description}</p>
-                            <p>{post.location}</p>
-                            <p>{post.theme}</p>
-                            <p>{post.vendors}</p>
+                            <div className='belowPicture'>
+                                <h4>{post.eventname}</h4>
+                                <p>{post.date}</p>
+                                <p>{post.description}</p>
+                                <p>{post.location}</p>
+                                <p>{post.theme}</p>
+                                <p>{post.vendors}</p>
+                            </div>
                         </div>
                     )
                 })}
