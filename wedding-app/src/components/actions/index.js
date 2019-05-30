@@ -11,8 +11,8 @@ export const login = creds => dispatch => {
     return axios
       .post(`${baseURL}/login`, creds)
       .then(res => {
-        console.log(res.data);
-        localStorage.setItem("token", res.data.payload);
+        console.log(res.data.tokenThing);
+        localStorage.setItem("token", res.data.tokenThing);
       })
       .catch();
   };
@@ -24,9 +24,7 @@ export const FETCH_POST_FAIL = 'FETCH_POST_FAIL';
 export const getPost = () => dispatch => {
     dispatch({ type: FETCH_POST_START });
     axios
-      .get(`${baseURL}/events`, {
-        headers: { Authorization: localStorage.getItem('token') }
-      })
+      .get(`${baseURL}/events`)
       .then(res => {
         dispatch({ type: FETCH_POST_SUCCESS, payload: res.data });
       })
@@ -43,9 +41,7 @@ export const ADD_PLANNER_FAIL = "ADD_PLANNER_FAIL";
 export const addNewPlanner = planner => dispatch => {
     dispatch({ type: ADD_PLANNER_START})
     return axios
-      .post(`${baseURL}/register`, planner, {
-        headers: { Authorization: localStorage.getItem('token') }
-      })
+      .post(`${baseURL}/register`, planner)
       .then(res => {
         dispatch({ type: ADD_PLANNER_SUCCESS, payload: res.data})
       })
@@ -62,11 +58,9 @@ export const ADD_POST_FAIL = "ADD_POST_FAIL";
 export const addNewPost = post => dispatch => {
     dispatch({ type: ADD_POST_START})
     return axios
-      .post(`${baseURL}/addevent`, post, 
-      // {
-      //   // headers: { Authorization: localStorage.getItem('token') }
-      // }
-      )
+      .post(`${baseURL}/addevent`, post, {
+        headers: { Authorization: localStorage.getItem('token') }
+      })
       .then(res => {
         dispatch({ type: ADD_POST_SUCCESS, payload: res.data})
       })
