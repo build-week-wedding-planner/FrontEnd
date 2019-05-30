@@ -26,10 +26,11 @@ class HomePage extends React.Component {
 
     editPost = (e, post) => {
         e.preventDefault();
-        this.props.editPost(post).then(() => {
-            this.setState({ editingPostID: null})
-        })
-    }
+        this.props.editPost(post).then(() => (
+            this.setState({ editingPostID: null}),
+            window.location.reload()
+        )
+        )}
    
 
     render() {
@@ -44,6 +45,7 @@ class HomePage extends React.Component {
                             <EditPostForm
                                 post={post}
                                 editPost={this.editPost}
+                                editingPost={this.props.editingPost}
                             />
                         </div>
                         )

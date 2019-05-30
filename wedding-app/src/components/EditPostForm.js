@@ -28,21 +28,21 @@ class EditPostForm extends React.Component {
                         name="eventname"
                         placeholder="Name of the Wedding!"
                         value={this.state.post.eventname}
-                        onChange={this.handleChange}
+                        onChange={this.handleChanges}
                     />
                     <input
                         type="text"
                         name="date"
                         placeholder="Date of the Wedding!"
                         value={this.state.post.date}
-                        onChange={this.handleChange}
+                        onChange={this.handleChanges}
                     />
                     <textarea
                         type="text"
                         name="description"
                         placeholder="Description of the Wedding!"
                         value={this.state.post.description}
-                        onChange={this.handleChange}
+                        onChange={this.handleChanges}
                         rows="5"
                     />
                     <input
@@ -50,21 +50,21 @@ class EditPostForm extends React.Component {
                         name="location"
                         placeholder="Location of the Wedding!"
                         value={this.state.post.location}
-                        onChange={this.handleChange}
+                        onChange={this.handleChanges}
                     />
                     <input
                         type="text"
                         name="theme"
                         placeholder="Wedding Theme!"
                         value={this.state.post.theme}
-                        onChange={this.handleChange}
+                        onChange={this.handleChanges}
                     />
                     <textarea
                         type="text"
                         name="vendors"
                         placeholder="List of Vendors Used!"
                         value={this.state.post.vendors}
-                        onChange={this.handleChange}
+                        onChange={this.handleChanges}
                         rows="5"
                     />
                     <button>Edit Wedding Post!</button>
