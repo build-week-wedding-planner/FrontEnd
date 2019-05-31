@@ -196,6 +196,10 @@
       flex-direction: column;
       border-radius: 8px;
       border: 1px solid #759fbc;
+      
+      @media (max-width: 800px) {
+        width: 95%;
+      }
 
       i {
         margin-left: 5px;
@@ -205,10 +209,20 @@
       .icons {
         margin-left: 460px;
         margin-bottom: 2%;
+
+        @media (max-width: 800px) {
+          margin-left: 350px;
+        }
       }
 
       img {
         border-radius: 8px;
+        margin-top: 5px;
+
+        @media (max-width: 800px) {
+          width: 100%;
+          height: auto;
+        }
       }
 
       h3 {
@@ -227,6 +241,10 @@
         p {
           font-family: 'Roboto', sans-serif;
         }
+      }
+
+      @media (max-width: 800px) {
+        width: 100%;
       }
 
       .editPostDiv {

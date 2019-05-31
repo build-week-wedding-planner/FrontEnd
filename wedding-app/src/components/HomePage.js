@@ -52,6 +52,7 @@ class HomePage extends React.Component {
                     }
                     return (
                         <div className="postCard" key={post.id}>
+                            {localStorage.getItem('token') ? ( 
                             <div className='icons'>
                                 <i 
                                     className="fas fa-pen"
@@ -62,6 +63,7 @@ class HomePage extends React.Component {
                                     onClick={() => this.deletePost(post.id)}
                                 />
                             </div>
+                            ) : ( null )}
                             <img src={img} alt='wedding reception table'/>
                             <div className='belowPicture'>
                                 <h4>{post.eventname}</h4>
