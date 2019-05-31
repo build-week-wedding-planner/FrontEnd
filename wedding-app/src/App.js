@@ -30,6 +30,7 @@ function App() {
         ) : (
           <nav>
             <img src={img} alt='wedding planner portfolio logo' />
+            <NavLink to="/">Home</NavLink>
             <NavLink to="/login">Login</NavLink>
             <NavLink to="/registar-form">Register as a Wedding Planner</NavLink>
           </nav>
