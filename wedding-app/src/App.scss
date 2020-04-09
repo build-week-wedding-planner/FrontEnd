@@ -1,411 +1,448 @@
-.App {
-  width: 900px;
-  margin-left: 17%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+// .App {
+//   width: 900px;
+//   margin-left: 17%;
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
 
-  @media (max-width: 800px) {
-    width: 100%;
-    margin-left: 0;
-  }
+//   @media (max-width: 800px) {
+//     width: 100%;
+//     margin-left: 0;
+//   }
 
-  @media (max-width: 500px) {
-    width: 100%;
-  }
-  nav {
-    width: 1200px;
-    height: 65px;
-    display: flex;
-    justify-content: space-evenly; 
-    align-items: center;
-    border-bottom-right-radius: 8px;
-    border-bottom-left-radius: 8px;
-    background-color: #759fbc;
+//   @media (max-width: 500px) {
+//     width: 100%;
+//   }
+//   nav {
+//     width: 1200px;
+//     height: 65px;
+//     display: flex;
+//     justify-content: space-evenly; 
+//     align-items: center;
+//     border-bottom-right-radius: 8px;
+//     border-bottom-left-radius: 8px;
+//     background-color: #759fbc;
 
-    @media (max-width: 800px) {
-      width: 100%;
-      height: 150px;
-      flex-direction: column;
-      align-items: center;
-      margin-left: 0;
-    }
+//     @media (max-width: 800px) {
+//       width: 100%;
+//       height: 150px;
+//       flex-direction: column;
+//       align-items: center;
+//       margin-left: 0;
+//     }
     
-    img {
-      width: 300px;
-    }
+//     img {
+//       width: 300px;
+//     }
 
-    a {
-      color: #e3e4db;
-      text-decoration: none;
-      font-size: 1.25rem;
-      font-family: 'Roboto', sans-serif;
+//     a {
+//       color: #e3e4db;
+//       text-decoration: none;
+//       font-size: 1.25rem;
+//       font-family: 'Roboto', sans-serif;
     
-      &:hover {
-        cursor: pointer;
-      }
+//       &:hover {
+//         cursor: pointer;
+//       }
 
-      @media (max-width: 800px) {
-        height: 50px;
-      }
-    }
-  }
+//       @media (max-width: 800px) {
+//         height: 50px;
+//       }
+//     }
+//   }
 
-  .loginForm {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-top: 15%;
+//   .loginForm {
+//     width: 100%;
+//     display: flex;
+//     justify-content: center;
+//     margin-top: 15%;
 
-    form {
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: baseline;
+//     form {
+//       width: 100%;
+//       display: flex;
+//       justify-content: center;
+//       align-items: baseline;
 
-      @media (max-width: 500px) {
-        flex-direction: column;
-        align-items: center;
-      }
+//       @media (max-width: 500px) {
+//         flex-direction: column;
+//         align-items: center;
+//       }
 
-      input {
-        width: 150px;
-        height: 30px;
-        margin-right: 2%;
-        text-align: center;
-        font-size: .95rem;
-        font-family: 'Roboto', sans-serif;
-        border: none;
-        border-bottom: 1px solid #759fbc;
+//       input {
+//         width: 150px;
+//         height: 30px;
+//         margin-right: 2%;
+//         text-align: center;
+//         font-size: .95rem;
+//         font-family: 'Roboto', sans-serif;
+//         border: none;
+//         border-bottom: 1px solid #759fbc;
         
-        &:focus {
-          outline: none;
-        }
+//         &:focus {
+//           outline: none;
+//         }
 
-        @media (max-width: 500px) {
-          margin-right: 0;
-          margin-bottom: 2%;
-          width: 100%;
-        }
-      }
+//         @media (max-width: 500px) {
+//           margin-right: 0;
+//           margin-bottom: 2%;
+//           width: 100%;
+//         }
+//       }
 
-      button {
-        width: 150px;
-        height: 30px;
-        border-radius: 6px;
-        background-color: #759fbc;
-        color: #e3e4db;
-        font-size: .95rem;
-        font-family: 'Roboto', sans-serif;
+//       button {
+//         width: 150px;
+//         height: 30px;
+//         border-radius: 6px;
+//         background-color: #759fbc;
+//         color: #e3e4db;
+//         font-size: .95rem;
+//         font-family: 'Roboto', sans-serif;
 
-        &:focus {
-          outline: none;
-        }
+//         &:focus {
+//           outline: none;
+//         }
 
-        &:hover {
-          cursor: pointer;
-        }
+//         &:hover {
+//           cursor: pointer;
+//         }
 
-        @media (max-width: 500px) {
-          width: 100%;
-          height: 40px;
-        }
-      }
-    }
-  }
+//         @media (max-width: 500px) {
+//           width: 100%;
+//           height: 40px;
+//         }
+//       }
+//     }
+//   }
 
-  .registarForm {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 5%;
+//   .registarForm {
+//     width: 100%;
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     margin-top: 5%;
 
-    h2 {
-      margin-top: 0;
-      font-family: 'Lobster', cursive;
-    }
+//     h2 {
+//       margin-top: 0;
+//       font-family: 'Lobster', cursive;
+//     }
 
-    form {
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
+//     form {
+//       width: 100%;
+//       display: flex;
+//       flex-direction: column;
+//       align-items: center;
+//       justify-content: center;
 
-      input {
-        width: 200px;
-        height: 30px;
-        margin: 2%;
-        text-align: center;
-        font-size: .95rem;
-        font-family: 'Roboto', sans-serif;
-        border: none;
-        border-bottom: 1px solid #759fbc;
+//       input {
+//         width: 200px;
+//         height: 30px;
+//         margin: 2%;
+//         text-align: center;
+//         font-size: .95rem;
+//         font-family: 'Roboto', sans-serif;
+//         border: none;
+//         border-bottom: 1px solid #759fbc;
         
-        &:focus {
-          outline: none;
-        }
+//         &:focus {
+//           outline: none;
+//         }
 
-        @media (max-width: 500px) {
-          margin-right: 0;
-          margin-bottom: 2%;
-          width: 100%;
-        }
-      }
+//         @media (max-width: 500px) {
+//           margin-right: 0;
+//           margin-bottom: 2%;
+//           width: 100%;
+//         }
+//       }
 
-      button {
-        width: 200px;
-        height: 30px;
-        border-radius: 6px;
-        background-color: #759fbc;
-        color: #e3e4db;
-        font-size: .95rem;
-        font-family: 'Roboto', sans-serif;
+//       button {
+//         width: 200px;
+//         height: 30px;
+//         border-radius: 6px;
+//         background-color: #759fbc;
+//         color: #e3e4db;
+//         font-size: .95rem;
+//         font-family: 'Roboto', sans-serif;
 
-        &:focus {
-          outline: none;
-        }
+//         &:focus {
+//           outline: none;
+//         }
 
-        &:hover {
-          cursor: pointer;
-        }
+//         &:hover {
+//           cursor: pointer;
+//         }
 
-        @media (max-width: 500px) {
-          width: 100%;
-          height: 40px;
-        }
-      }
-    }
-  }
+//         @media (max-width: 500px) {
+//           width: 100%;
+//           height: 40px;
+//         }
+//       }
+//     }
+//   }
 
-  .homePageDiv {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    h2 {
-      margin-top: 5%;
-      font-family: 'Lobster', cursive;
-    }
+//   .homePageDiv {
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     h2 {
+//       margin-top: 5%;
+//       font-family: 'Lobster', cursive;
+//     }
 
-    .postCard {
-      width: 500px;
-      margin-bottom: 5px;
-      padding: 5px;
-      display: flex;
-      flex-direction: column;
-      border-radius: 8px;
-      border: 1px solid #759fbc;
+//     .postCard {
+//       width: 500px;
+//       margin-bottom: 5px;
+//       padding: 5px;
+//       display: flex;
+//       flex-direction: column;
+//       border-radius: 8px;
+//       border: 1px solid #759fbc;
       
-      @media (max-width: 800px) {
-        width: 95%;
-      }
+//       @media (max-width: 800px) {
+//         width: 95%;
+//       }
 
-      i {
-        margin-left: 5px;
-        color: #CDCDCD
-      }
+//       i {
+//         margin-left: 5px;
+//         color: #CDCDCD
+//       }
 
-      .icons {
-        margin-left: 460px;
-        margin-bottom: 2%;
+//       .icons {
+//         margin-left: 460px;
+//         margin-bottom: 2%;
 
-        @media (max-width: 800px) {
-          margin-left: 350px;
-        }
-      }
+//         @media (max-width: 800px) {
+//           margin-left: 350px;
+//         }
+//       }
 
-      img {
-        border-radius: 8px;
-        margin-top: 5px;
+//       img {
+//         border-radius: 8px;
+//         margin-top: 5px;
 
-        @media (max-width: 800px) {
-          width: 100%;
-          height: auto;
-        }
-      }
+//         @media (max-width: 800px) {
+//           width: 100%;
+//           height: auto;
+//         }
+//       }
 
-      h3 {
-        font-family: 'Lobster', cursive;
-        font-size: 1.5rem;
-        margin-left: 5px;
-      }
+//       h3 {
+//         font-family: 'Lobster', cursive;
+//         font-size: 1.5rem;
+//         margin-left: 5px;
+//       }
 
-      .belowPicture {
-        text-align: center;
-        h4 {
-          font-family: 'Lobster', cursive;
-          font-size: 1.25rem;
-        }
+//       .belowPicture {
+//         text-align: center;
+//         h4 {
+//           font-family: 'Lobster', cursive;
+//           font-size: 1.25rem;
+//         }
 
-        p {
-          font-family: 'Roboto', sans-serif;
-        }
-      }
+//         p {
+//           font-family: 'Roboto', sans-serif;
+//         }
+//       }
 
-      @media (max-width: 800px) {
-        width: 100%;
-      }
+//       @media (max-width: 800px) {
+//         width: 100%;
+//       }
 
-      .editPostDiv {
-        form {
-          width: 100%;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;
+//       .editPostDiv {
+//         form {
+//           width: 100%;
+//           display: flex;
+//           flex-direction: column;
+//           align-items: center;
+//           justify-content: center;
     
-          img {
-            width: 500px;
-            height: auto;
-          }
-          input {
-            width: 200px;
-            height: 30px;
-            margin: 2%;
-            text-align: center;
-            font-size: .95rem;
-            font-family: 'Roboto', sans-serif;
-            border: none;
-            border-bottom: 1px solid #759fbc;
+//           img {
+//             width: 500px;
+//             height: auto;
+//           }
+//           input {
+//             width: 200px;
+//             height: 30px;
+//             margin: 2%;
+//             text-align: center;
+//             font-size: .95rem;
+//             font-family: 'Roboto', sans-serif;
+//             border: none;
+//             border-bottom: 1px solid #759fbc;
             
-            &:focus {
-              outline: none;
-            }
+//             &:focus {
+//               outline: none;
+//             }
     
-            @media (max-width: 500px) {
-              margin-right: 0;
-              margin-bottom: 2%;
-              width: 100%;
-            }
-          }
+//             @media (max-width: 500px) {
+//               margin-right: 0;
+//               margin-bottom: 2%;
+//               width: 100%;
+//             }
+//           }
     
-          textarea {
-            width: 200px;
-            height: 40px;
-            margin: 2%;
-            text-align: center;
-            font-size: .95rem;
-            font-family: 'Roboto', sans-serif;
-            border: none;
-            border-bottom: 1px solid #759fbc;
+//           textarea {
+//             width: 200px;
+//             height: 40px;
+//             margin: 2%;
+//             text-align: center;
+//             font-size: .95rem;
+//             font-family: 'Roboto', sans-serif;
+//             border: none;
+//             border-bottom: 1px solid #759fbc;
             
-            &:focus {
-              outline: none;
-            }
+//             &:focus {
+//               outline: none;
+//             }
     
-            @media (max-width: 500px) {
-              margin-right: 0;
-              margin-bottom: 2%;
-              width: 100%;
-            }
-          }
+//             @media (max-width: 500px) {
+//               margin-right: 0;
+//               margin-bottom: 2%;
+//               width: 100%;
+//             }
+//           }
     
-          button {
-            width: 200px;
-            height: 30px;
-            border-radius: 6px;
-            background-color: #759fbc;
-            color: #e3e4db;
-            font-size: .95rem;
-            font-family: 'Roboto', sans-serif;
+//           button {
+//             width: 200px;
+//             height: 30px;
+//             border-radius: 6px;
+//             background-color: #759fbc;
+//             color: #e3e4db;
+//             font-size: .95rem;
+//             font-family: 'Roboto', sans-serif;
     
-            &:focus {
-              outline: none;
-            }
+//             &:focus {
+//               outline: none;
+//             }
     
-            &:hover {
-              cursor: pointer;
-            }
+//             &:hover {
+//               cursor: pointer;
+//             }
     
-            @media (max-width: 500px) {
-              width: 100%;
-              height: 40px;
-            }
-          }
-        }
-      }
-    }
-  }
+//             @media (max-width: 500px) {
+//               width: 100%;
+//               height: 40px;
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
 
-  .postForm {
-    width: 100%;
-    margin-top: 5%;
-    form {
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
+//   .postForm {
+//     width: 100%;
+//     margin-top: 5%;
+//     form {
+//       width: 100%;
+//       display: flex;
+//       flex-direction: column;
+//       align-items: center;
+//       justify-content: center;
 
-      img {
-        width: 500px;
-        height: auto;
-      }
-      input {
-        width: 200px;
-        height: 30px;
-        margin: 2%;
-        text-align: center;
-        font-size: .95rem;
-        font-family: 'Roboto', sans-serif;
-        border: none;
-        border-bottom: 1px solid #759fbc;
+//       img {
+//         width: 500px;
+//         height: auto;
+//       }
+//       input {
+//         width: 200px;
+//         height: 30px;
+//         margin: 2%;
+//         text-align: center;
+//         font-size: .95rem;
+//         font-family: 'Roboto', sans-serif;
+//         border: none;
+//         border-bottom: 1px solid #759fbc;
         
-        &:focus {
-          outline: none;
-        }
+//         &:focus {
+//           outline: none;
+//         }
 
-        @media (max-width: 500px) {
-          margin-right: 0;
-          margin-bottom: 2%;
-          width: 100%;
-        }
-      }
+//         @media (max-width: 500px) {
+//           margin-right: 0;
+//           margin-bottom: 2%;
+//           width: 100%;
+//         }
+//       }
 
-      textarea {
-        width: 200px;
-        height: 30px;
-        margin: 2%;
-        text-align: center;
-        font-size: .95rem;
-        font-family: 'Roboto', sans-serif;
-        border: none;
-        border-bottom: 1px solid #759fbc;
+//       textarea {
+//         width: 200px;
+//         height: 30px;
+//         margin: 2%;
+//         text-align: center;
+//         font-size: .95rem;
+//         font-family: 'Roboto', sans-serif;
+//         border: none;
+//         border-bottom: 1px solid #759fbc;
         
-        &:focus {
-          outline: none;
-        }
+//         &:focus {
+//           outline: none;
+//         }
 
-        @media (max-width: 500px) {
-          margin-right: 0;
-          margin-bottom: 2%;
-          width: 100%;
-        }
-      }
+//         @media (max-width: 500px) {
+//           margin-right: 0;
+//           margin-bottom: 2%;
+//           width: 100%;
+//         }
+//       }
 
-      button {
-        width: 200px;
-        height: 30px;
-        border-radius: 6px;
-        background-color: #759fbc;
-        color: #e3e4db;
-        font-size: .95rem;
-        font-family: 'Roboto', sans-serif;
+//       button {
+//         width: 200px;
+//         height: 30px;
+//         border-radius: 6px;
+//         background-color: #759fbc;
+//         color: #e3e4db;
+//         font-size: .95rem;
+//         font-family: 'Roboto', sans-serif;
 
-        &:focus {
-          outline: none;
-        }
+//         &:focus {
+//           outline: none;
+//         }
 
-        &:hover {
-          cursor: pointer;
-        }
+//         &:hover {
+//           cursor: pointer;
+//         }
 
-        @media (max-width: 500px) {
-          width: 100%;
-          height: 40px;
-        }
-      }
-    }
-  }
-}
+//         @media (max-width: 500px) {
+//           width: 100%;
+//           height: 40px;
+//         }
+//       }
+//     }
+//   }
+// }
+
+
+@charset "utf-8";
+
+// Import a Google Font
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,700');
+
+// Set your brand colors
+$purple: #8A4D76;
+$pink: #FA7C91;
+$brown: #757763;
+$beige-light: #D0D1CD;
+$beige-lighter: #EFF0EB;
+
+// Update Bulma's global variables
+$family-sans-serif: "Nunito", sans-serif;
+$grey-dark: $brown;
+$grey-light: $beige-light;
+$primary: $purple;
+$link: $pink;
+$widescreen-enabled: false;
+$fullhd-enabled: false;
+
+// Update some of Bulma's component variables
+$body-background-color: $beige-lighter;
+$control-border-width: 2px;
+$input-border-color: transparent;
+$input-shadow: none;
+
+// Import only what you need from Bulma
+@import "../node_modules/bulma/sass/utilities/_all.sass";
+@import "../node_modules/bulma/sass/base/_all.sass";
+@import "../node_modules/bulma/sass/elements/_all.sass";
+@import "../node_modules/bulma/sass/form/_all.sass";
+@import "../node_modules/bulma/sass/components/_all.sass";
+@import "../node_modules/bulma/sass/layout/_all.sass";
+@import "../node_modules/bulma/sass/grid/_all.sass";
