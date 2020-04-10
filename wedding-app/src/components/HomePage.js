@@ -8,6 +8,12 @@ import EditPostForm from './EditPostForm';
 
 import img from '../wedding.jpg'
 
+var wrap = {
+    'width': '100%',
+    'display': 'flex',
+    'flex-wrap': 'wrap'
+}
+
 class HomePage extends React.Component {
     state = {
         deletingPost: null,
@@ -38,6 +44,7 @@ class HomePage extends React.Component {
         return (
             <div className="homePageDiv">
                 <h2>Welcome to Wedding Planner Portfolio!</h2>
+                <div class="tile is-ancestor has-text-centered is-paddingless is-marginless" style={wrap}>
                 {this.props.posts.map(post => {
                     if (this.state.editingPostID === post.id) {
                         return (
@@ -51,7 +58,7 @@ class HomePage extends React.Component {
                         )
                     }
                     return (
-                        <div className="postCard" key={post.id}>
+                        <div class="tile is-child notification is-4" key={post.id}>
                             {localStorage.getItem('token') ? ( 
                             <div className='icons'>
                                 <i 
@@ -76,6 +83,7 @@ class HomePage extends React.Component {
                         </div>
                     )
                 })}
+                </div>
             </div>
         )
     }
