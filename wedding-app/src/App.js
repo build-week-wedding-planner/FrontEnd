@@ -11,6 +11,11 @@ import img from './WPP.png'
 
 import './App.scss';
 
+var navImg = {
+  'margin': '5%',
+  'height': 'auto'
+}
+
 function App() {
   const logout = () => {
     localStorage.removeItem('token');
@@ -21,11 +26,21 @@ function App() {
     <Router>
     <div className="App">
         {localStorage.getItem('token') ? (
-          <nav>
-            <img src={img} alt='wedding planner portfolio logo' />
-            <NavLink to="/">Home</NavLink>
-            <NavLink to="/protected">Create Post</NavLink>
-            <a onClick={() => logout()} href="#" className="activeNavButton">Logout</a>
+          <nav class="navbar">
+            <div class="navbar-brand">
+              <img src={img} alt='wedding planner portfolio logo' style={navImg}/>
+            </div>
+            <div class="navbar-end">
+              <a class="navbar-item">
+                <NavLink to="/">Home</NavLink>
+              </a>
+              <a class="navbar-item">
+                <NavLink to="/protected">Create Post</NavLink>
+              </a>
+              <a class="navbar-item">
+                <a onClick={() => logout()} href="#" className="activeNavButton">Logout</a>
+              </a>
+            </div>
           </nav>
         ) : (
           <nav>
