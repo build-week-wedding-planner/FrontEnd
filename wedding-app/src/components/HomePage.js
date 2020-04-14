@@ -14,6 +14,7 @@ var wrap = {
     'flex-wrap': 'wrap'
 }
 
+
 class HomePage extends React.Component {
     state = {
         deletingPost: null,
