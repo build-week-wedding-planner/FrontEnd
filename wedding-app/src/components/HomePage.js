@@ -60,26 +60,30 @@ class HomePage extends React.Component {
                     }
                     return (
                         <div class="tile is-child notification is-4" key={post.id}>
-                            {localStorage.getItem('token') ? ( 
-                            <div className='icons'>
-                                <i 
-                                    className="fas fa-pen"
-                                    onClick={() => this.setState({ editingPostID: post.id})}
-                                />
-                                <i
-                                    className="fas fa-times"
-                                    onClick={() => this.deletePost(post.id)}
-                                />
-                            </div>
-                            ) : ( null )}
-                            <img src={img} alt='wedding reception table'/>
-                            <div className='belowPicture'>
-                                <h4>{post.eventname}</h4>
-                                <p>{post.date}</p>
-                                <p>{post.description}</p>
-                                <p>{post.location}</p>
-                                <p>{post.theme}</p>
-                                <p>{post.vendors}</p>
+                            <div class="card">
+                                {localStorage.getItem('token') ? ( 
+                                <div className='icons'>
+                                    <i 
+                                        className="fas fa-pen"
+                                        onClick={() => this.setState({ editingPostID: post.id})}
+                                    />
+                                    <i
+                                        className="fas fa-times"
+                                        onClick={() => this.deletePost(post.id)}
+                                    />
+                                </div>
+                                ) : ( null )}
+                                <div class="card-image">
+                                    <img src={img} alt='wedding reception table'/>
+                                </div>
+                                <div class='card-content'>
+                                    <h4 class="title is-4">{post.eventname}</h4>
+                                    <p>{post.date}</p>
+                                    <p>{post.description}</p>
+                                    <p>{post.location}</p>
+                                    <p>{post.theme}</p>
+                                    <p>{post.vendors}</p>
+                                </div>
                             </div>
                         </div>
                     )
