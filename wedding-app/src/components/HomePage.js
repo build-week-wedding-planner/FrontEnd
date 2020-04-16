@@ -14,6 +14,11 @@ var wrap = {
     'flex-wrap': 'wrap'
 }
 
+var icons = {
+    'display': 'flex',
+    'justify-content': 'flex-end'
+}
+
 
 class HomePage extends React.Component {
     state = {
@@ -61,16 +66,20 @@ class HomePage extends React.Component {
                     return (
                         <div class="tile is-child notification is-4" key={post.id}>
                             <div class="card">
-                                {localStorage.getItem('token') ? ( 
-                                <div className='icons'>
-                                    <i 
-                                        className="fas fa-pen"
-                                        onClick={() => this.setState({ editingPostID: post.id})}
-                                    />
-                                    <i
-                                        className="fas fa-times"
-                                        onClick={() => this.deletePost(post.id)}
-                                    />
+                                {localStorage.getItem('token') ? (
+                                <div style={icons}> 
+                                    <span class='icon'>
+                                        <i 
+                                            className="fas fa-pen"
+                                            onClick={() => this.setState({ editingPostID: post.id})}
+                                        />
+                                    </span>
+                                    <span class='icon'>
+                                        <i
+                                            className="fas fa-times"
+                                            onClick={() => this.deletePost(post.id)}
+                                        />
+                                    </span>
                                 </div>
                                 ) : ( null )}
                                 <div class="card-image">

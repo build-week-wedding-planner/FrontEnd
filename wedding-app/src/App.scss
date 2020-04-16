@@ -418,14 +418,14 @@
 
 // Set your brand colors
 $blue: #759FBC;
-$grey: #2c2c2c;
+$grey: #393939;
 $brown: #757763;
 $beige-light: #D0D1CD;
 $beige-lighter: #f3f3f3;
 
 // Update Bulma's global variables
 $family-sans-serif: "Nunito", sans-serif;
-$grey-dark: $brown;
+$grey-dark: $grey;
 $grey-light: $beige-light;
 $primary: $blue;
 $link: $grey;
