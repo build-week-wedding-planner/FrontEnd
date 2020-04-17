@@ -43,11 +43,21 @@ function App() {
             </div>
           </nav>
         ) : (
-          <nav>
-            <img src={img} alt='wedding planner portfolio logo' />
-            <NavLink to="/">Home</NavLink>
-            <NavLink to="/login">Login</NavLink>
-            <NavLink to="/registar-form">Register as a Wedding Planner</NavLink>
+          <nav class="navbar">
+            <div class="navbar-brand">
+              <img src={img} alt='wedding planner portfolio logo' style={navImg}/>
+            </div>
+            <div class="navbar-end">
+              <a class="navbar-item">
+                <NavLink to="/">Home</NavLink>
+              </a>
+              <a class="navbar-item">
+                <NavLink to="/login">Login</NavLink>
+              </a>
+              <a class="navbar-item">
+                <NavLink to="/registar-form">Register as a Wedding Planner</NavLink>
+              </a>
+            </div>
           </nav>
         )}
       <Route exact path='/' component={HomePage} />

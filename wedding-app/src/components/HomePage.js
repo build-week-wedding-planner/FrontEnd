@@ -49,7 +49,7 @@ class HomePage extends React.Component {
         console.log(this.props.posts);
         return (
             <section class="section has-text-centered">
-                <h2>Welcome to Wedding Planner Portfolio!</h2>
+                <h2 class="title is-3">Welcome to Wedding Planner Portfolio!</h2>
                 <div class="tile is-ancestor has-text-centered is-paddingless is-marginless" style={wrap}>
                 {this.props.posts.map(post => {
                     if (this.state.editingPostID === post.id) {
