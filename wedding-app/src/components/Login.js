@@ -27,25 +27,39 @@ class Login extends React.Component {
 
     render() {
         return (
-            <div className="loginForm">
+            <section class="section">
                 <form onSubmit={this.login}>
-                    <input
-                        type="text"
-                        name="username"
-                        placeholder="Username"
-                        value={this.state.credentials.username}
-                        onChange={this.handleChange}
-                    />
-                    <input
-                        type="password"
-                        name="password"
-                        placeholder="Password"
-                        value={this.state.credentials.password}
-                        onChange={this.handleChange}
-                    />
-                    <button>Log in</button>
+                    <div class="field is-horizontal">
+                        <div class="field-body">
+                            <div class="field">
+                                <div class="control">
+                                <input
+                                    class="input"
+                                    type="text"
+                                    name="username"
+                                    placeholder="Username"
+                                    value={this.state.credentials.username}
+                                    onChange={this.handleChange}
+                                />
+                                </div>
+                            </div>
+                            <div class="field">
+                                <div class="control">
+                                    <input
+                                        class="input"
+                                        type="password"
+                                        name="password"
+                                        placeholder="Password"
+                                        value={this.state.credentials.password}
+                                        onChange={this.handleChange}
+                                    />
+                                </div>
+                            </div>
+                            <button class="button is-primary">Log in</button>
+                        </div>
+                    </div>
                 </form>
-            </div>
+            </section>
         );
     }  
 }
