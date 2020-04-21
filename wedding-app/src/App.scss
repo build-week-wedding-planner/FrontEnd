@@ -414,21 +414,21 @@
 @charset "utf-8";
 
 // Import a Google Font
-@import url('https://fonts.googleapis.com/css?family=Nunito:400,700');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
 // Set your brand colors
-$purple: #8A4D76;
-$pink: #FA7C91;
+$blue: #759FBC;
+$grey: #393939;
 $brown: #757763;
-$beige-light: #D0D1CD;
-$beige-lighter: #EFF0EB;
+$beige-light: #f6f6f6;
+$beige-lighter: #f6f6f6;
 
 // Update Bulma's global variables
-$family-sans-serif: "Nunito", sans-serif;
-$grey-dark: $brown;
+$family-sans-serif: 'Montserrat', sans-serif;;
+$grey-dark: $grey;
 $grey-light: $beige-light;
-$primary: $purple;
-$link: $pink;
+$primary: $blue;
+$link: $grey;
 $widescreen-enabled: false;
 $fullhd-enabled: false;
 

@@ -39,54 +39,68 @@ class RegistarForm extends React.Component {
 
     render() {
         return (
-            <div className="registarForm">
+            <section class="section">
                 <h2>Sign Up as a Wedding Planner!</h2>
                 <form onSubmit={this.addPlanner}>
-                    {/* <input
-                        type="text"
-                        name="firstName"
-                        placeholder="First Name"
-                        value={this.state.credentials.firstName}
-                        onChange={this.handleChange}
-                    />
-                    <input
-                        type="text"
-                        name="lastName"
-                        placeholder="Last Name"
-                        value={this.state.credentials.lastName}
-                        onChange={this.handleChange}
-                    />
-                    <input
-                        type="text"
-                        name="email"
-                        placeholder="Email"
-                        value={this.state.credentials.email}
-                        onChange={this.handleChange}
-                    />
-                    <input
-                        type="text"
-                        name="location"
-                        placeholder="Location"
-                        value={this.state.credentials.location}
-                        onChange={this.handleChange}
-                    /> */}
-                    <input
-                        type="text"
-                        name="username"
-                        placeholder="Username"
-                        value={this.state.credentials.username}
-                        onChange={this.handleChange}
-                    />
-                    <input
-                        type="password"
-                        name="password"
-                        placeholder="Password"
-                        value={this.state.credentials.password}
-                        onChange={this.handleChange}
-                    />
-                    <button>Sign Up!</button>
+                    <div class="field is-horizontal">
+                        <div class="field-body">
+                            <div class="field">
+                                <div class="control">
+                                    {/* <input
+                                        type="text"
+                                        name="firstName"
+                                        placeholder="First Name"
+                                        value={this.state.credentials.firstName}
+                                        onChange={this.handleChange}
+                                    />
+                                    <input
+                                        type="text"
+                                        name="lastName"
+                                        placeholder="Last Name"
+                                        value={this.state.credentials.lastName}
+                                        onChange={this.handleChange}
+                                    />
+                                    <input
+                                        type="text"
+                                        name="email"
+                                        placeholder="Email"
+                                        value={this.state.credentials.email}
+                                        onChange={this.handleChange}
+                                    />
+                                    <input
+                                        type="text"
+                                        name="location"
+                                        placeholder="Location"
+                                        value={this.state.credentials.location}
+                                        onChange={this.handleChange}
+                                    /> */}
+                                    <input
+                                        class="input"
+                                        type="text"
+                                        name="username"
+                                        placeholder="Username"
+                                        value={this.state.credentials.username}
+                                        onChange={this.handleChange}
+                                    />
+                                </div>
+                            </div>
+                            <div class="field">
+                                <div class="control">
+                                    <input
+                                        class="input"
+                                        type="password"
+                                        name="password"
+                                        placeholder="Password"
+                                        value={this.state.credentials.password}
+                                        onChange={this.handleChange}
+                                    />
+                                </div>
+                            </div>
+                            <button class="button is-primary">Sign Up!</button>
+                        </div>
+                    </div>
                 </form>
-            </div>
+            </section>
             
         );
     }  
