@@ -54,13 +54,17 @@ class HomePage extends React.Component {
                 {this.props.posts.map(post => {
                     if (this.state.editingPostID === post.id) {
                         return (
-                        <div className="postCard" key={post.id}> 
-                            <EditPostForm
-                                post={post}
-                                editPost={this.editPost}
-                                editingPost={this.props.editingPost}
-                            />
-                        </div>
+                            <div class="tile is-child notification is-4" key={post.id}>
+                                <div class="card">
+                                    <div class='card-content'>
+                                        <EditPostForm
+                                            post={post}
+                                            editPost={this.editPost}
+                                            editingPost={this.props.editingPost}
+                                        />
+                                    </div>
+                                </div>
+                            </div>
                         )
                     }
                     return (

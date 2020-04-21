@@ -75,7 +75,7 @@ class RegistarForm extends React.Component {
                                         onChange={this.handleChange}
                                     /> */}
                                     <input
-                                        class="input"
+                                        class="input is-primary"
                                         type="text"
                                         name="username"
                                         placeholder="Username"
@@ -87,7 +87,7 @@ class RegistarForm extends React.Component {
                             <div class="field">
                                 <div class="control">
                                     <input
-                                        class="input"
+                                        class="input is-primary"
                                         type="password"
                                         name="password"
                                         placeholder="Password"
