@@ -19,6 +19,17 @@ var icons = {
     'justify-content': 'flex-end'
 }
 
+var hero = {
+    'height': '150px',
+    'display': 'flex',
+    'justify-content': 'center',
+}
+
+var footer = {
+    'height': '100px',
+    'display': 'flex',
+    'justify-content': 'center',
+}
 
 class HomePage extends React.Component {
     state = {
@@ -48,8 +59,11 @@ class HomePage extends React.Component {
     render() {
         console.log(this.props.posts);
         return (
-            <section class="section has-text-centered">
-                <h2 class="title is-3">Welcome to Wedding Planner Portfolio!</h2>
+            <>
+            <section class="section has-text-centered is-paddingless is-marginless">
+                <section class="hero is-primary is-bold" style={hero}>
+                    <h2 class="title is-3">Welcome to Wedding Planner Portfolio!</h2>
+                </section>
                 <div class="tile is-ancestor has-text-centered is-paddingless is-marginless" style={wrap}>
                 {this.props.posts.map(post => {
                     if (this.state.editingPostID === post.id) {
@@ -103,6 +117,12 @@ class HomePage extends React.Component {
                 })}
                 </div>
             </section>
+            <footer class="footer is-paddingless is-marginless">
+                <section class="hero is-primary is-bold has-text-centered" style={footer}>
+                    <p>Wedding Planner Portfolio ©2020</p>
+                </section>
+            </footer>
+            </>
         )
     }
 }
