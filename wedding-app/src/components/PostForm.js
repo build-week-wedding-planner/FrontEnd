@@ -23,7 +23,7 @@ class PostForm extends React.Component {
         }
     }
 
-    handleChange = e => {
+    handleChanges = e => {
         this.setState({
           post: {
             ...this.state.post,
