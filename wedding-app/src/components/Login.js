@@ -34,7 +34,7 @@ class Login extends React.Component {
                             <div class="field">
                                 <div class="control">
                                 <input
-                                    class="input"
+                                    class="input is-primary"
                                     type="text"
                                     name="username"
                                     placeholder="Username"
@@ -46,7 +46,7 @@ class Login extends React.Component {
                             <div class="field">
                                 <div class="control">
                                     <input
-                                        class="input"
+                                        class="input is-primary"
                                         type="password"
                                         name="password"
                                         placeholder="Password"
